@@ -73,7 +73,7 @@ GEM
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     public_suffix (2.0.5)
-    rack (2.0.1)
+    rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (12.0.0)
@@ -104,6 +104,7 @@ DEPENDENCIES
   capybara
   data_mapper
   dm-postgres-adapter
+  rack (< 2.0)
   rake
   rspec
   sinatra
