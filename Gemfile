@@ -6,5 +6,9 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'rake'
 gem 'rack', '<2.0'
-gem 'rspec'
 gem 'sinatra'
+
+group :test do
+  gem 'rspec'
+  gem 'database_cleaner'
+end
