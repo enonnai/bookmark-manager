@@ -13,10 +13,10 @@ feature 'Tags' do
   scenario 'Can view tags' do
     visit '/links/new'
     fill_in('title', with: 'Blow Soap Bubbles')
-    fill_in('url', with: 'http://www.popsci.com/how-to-freeze-soap-bubbles-into-ice-orbs')
+    fill_in('url', with: 'www.bubbles.com')
     fill_in 'tags', with: 'bubbles'
     click_button 'Save'
-    visit '/tags/bubbles'
+    visit '/tag/bubbles'
     expect(page).to have_content 'Blow Soap Bubbles'
   end
 end

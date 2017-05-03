@@ -21,6 +21,12 @@ class BookmarkManagerWeb < Sinatra::Base
     erb :'links/new'
   end
 
+  get '/tag/:tag' do
+    @tag = Tag.first(params[:tag])
+    @tag_links = @tag.links
+    erb :'links/tag'
+  end
+
   run! if app_file == $0
 
 end
