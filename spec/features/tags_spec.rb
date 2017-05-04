@@ -24,4 +24,15 @@ feature 'Tags' do
     expect(page).to have_content 'Blow Soap Bubbles'
     expect(page).not_to have_content "Google"
   end
+
+  scenario 'Can add multiple tags' do
+   visit '/links/new'
+   fill_in('title', with: 'Blow Soap Bubbles')
+   fill_in('url', with: 'www.bubbles.com')
+   fill_in('tags', with: 'bubbles soap')
+   click_button 'Save'
+   link = Link.first
+   p link.tags.map(&:tag)
+   expect(link.tags.map(&:tag)).to include('bubbles', 'soap')
+ end
 end
