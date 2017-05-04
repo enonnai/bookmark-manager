@@ -5,6 +5,7 @@ gem 'data_mapper'
 gem 'database_cleaner'
 gem 'dm-postgres-adapter'
 gem 'rake'
+gem 'bcrypt'
 gem 'rack', '<2.0'
 gem 'sinatra'
 

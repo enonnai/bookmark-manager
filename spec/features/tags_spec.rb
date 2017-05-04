@@ -30,7 +30,7 @@ feature 'Tags' do
       fill_in('url', with: 'www.bubbles.com')
       fill_in 'tags', with: 'bubbles'
       click_button 'Save'
-      visit '/tag/bubbles'
+      visit '/tags/bubbles'
       expect(page).to have_content 'Blow Soap Bubbles'
       expect(page).not_to have_content "Google"
     end
